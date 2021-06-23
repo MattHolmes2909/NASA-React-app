@@ -6,11 +6,12 @@ import SearchResults from "./SearchResults";
 function App() {
   const [searchResults, setSearchResults] = useState();
   return (
-    <div className="App">
+    <div className="App" data-testid="app">
       <img
       className="nasa-logo"
       src="https://cdn.cnn.com/cnnnext/dam/assets/200424060716-nasa-worm-logo.jpg"
       alt="nasaLogo"
+      data-testid="logo"
       />
       <Search setSearchResults={setSearchResults} />
       <div className="search-results">

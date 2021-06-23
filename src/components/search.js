@@ -13,18 +13,20 @@ const Search = ({ setSearchResults }) => {
 
     return (
         <>
-            <form className="search-form" onSubmit={handleSubmit}>
-        <input
-        className="search-input"
-        type="text"
-        onChange={(e) => setValue(e.target.value)}
-        />
-        <button className="search-btn" type="submit">
-            Go!
-        </button>
-        </form>
+        <form className="search-form" onSubmit={handleSubmit}>
+            <input
+            className="search-input"
+            type="text"
+            onChange={(e) => setValue(e.target.value)}
+            placeholder="Search Images.."
+            data-testid="search-input"
+            />
+            <button className="search-btn" type="submit" data-testid="search-btn">
+                Go!
+                </button>
+            </form>
         </>
-    );
+   );
 };
 
 Search.propTypes = {
