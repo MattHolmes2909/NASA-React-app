@@ -9,3 +9,11 @@ describe("Search", () => {
         expect(asFragment()).toMatchSnapshot;
     });
 });
+
+it("renders input correctly", () => {
+    const { getByTestId } = render(
+        <Search setSearchResults={validProps.setSearchResults} />
+    );
+    const input = getByTestId("search-input");
+    expect(input).toBeTruthy();
+});
